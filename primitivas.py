@@ -9,23 +9,31 @@ from OpenGL.GL import *
 from glew_wish import *
 import glfw
 
-def draw():
+def draw_triangles():
     glBegin(GL_TRIANGLES)
     #3 vertices que openGL interpreta como triangulo
-    glColor3f(0.7,0.7,0)
+    glColor3f(0.6,0.6,0)
     glVertex3f(-1,0,0)
     glColor3f(0,1,1)
     glVertex3f(0,1,0)
     glColor3f(1,0,1)
     glVertex3f(0.7,0.5,0)
 
-    glColor3f(0.7,0.7,0)
-    glVertex3f(-1,0,0)
-    glColor3f(0,1,1)
-    glVertex3f(0,-1,0)
-    glColor3f(1,0,1)
-    glVertex3f(0.7,0.5,0)
+    #glColor3f(0.6,0.6,0)
+    #glVertex3f(-1,0,0)
+    #glColor3f(0,1,1)
+    #glVertex3f(0,-1,0)
+    #glColor3f(1,0,1)
+    #glVertex3f(0.7,0.5,0)
 
+    glEnd()
+
+def draw_point():
+    glBegin(GL_POINTS)
+    glColor3f(1.0,1.0,1.0)
+    glVertex(0,0,0)
+    glColor3f(1.0,1.0,1.0)
+    glVertex(-0.5,-0.5,0)
     glEnd()
 
 def main():
@@ -70,12 +78,13 @@ def main():
         #Establecer el viewport
         #glViewport(0,0,800,600)
         #Establecer color de borrado
-        glClearColor(0,0.7,0.9,1)
+        glClearColor(0,0.0,0.0,1)
         #Borrar el contenido del viewport
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT )
 
         #Dibujar
-        draw()
+        draw_triangles()
+        draw_point()
 
         #Polling de inputs
         glfw.poll_events()

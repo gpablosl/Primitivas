@@ -82,18 +82,15 @@ def draw_quads():
 def draw_polygon():
     glBegin(GL_POLYGON)
     glColor3f(0.0,0.4,0.7)
-    glVertex3f(-0.26,-0.3,0.0)
+    glVertex3f(0.0,0.0,0.0)
     glColor3f(0.14,0.4,0.9)
-    glVertex3f(-0.6,-0.2,0.0)
+    glVertex3f(0.0,-0.4,0.0)
     glColor3f(1.0,1.0,1.0)
-    glVertex3f(-0.14,-0.4,0.0)
+    glVertex3f(0.3,-0.4,0.0)
     glColor3f(0.0,0.4,0.7)
-    glVertex3f(-0.6,-0.5,0.0)
+    glVertex3f(0.3,0.4,0.0)
     glColor3f(0.0,-0.4,0.7)
-    glVertex3f(-0.5,-0.5,0.0)
-    glColor3f(0.0,0.4,0.7)
-    glVertex3f(-0.6,-0.5,0.0)
-
+    glVertex3f(-0.3,0.1,0.0)
     glEnd()
 
 def main():
